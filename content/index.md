@@ -25,4 +25,4 @@ The Cape Ann Amateur Radio Association mission is to:
 - Assist public utilities, such as the Mass Electric Company, in finding radio frequency interferences that could potentially harm or hinder emergency communication activities
 - Create a positive, supportive environment for our members that promotes camaraderie and fellowship.
 
-Cape Ann Amateur Radio Association members will serve the public unselfishly, will not take any form of remuneration for their services, and will only undertake activities that are 100% for the general good. 
+Cape Ann Amateur Radio Association members will serve the public unselfishly, will not take any form of remuneration for their services, and will only undertake activities that are 100% for the general good.

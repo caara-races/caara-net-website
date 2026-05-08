@@ -21,4 +21,4 @@ Recipients of the award will be selected by a method approved by the Scholarship
 
 ## Awards
 
-The CAARA Scholarship Program will make one-time awards of $250 to each student who is selected. The number of awards will depend on the funds available and will be given to students in Gloucester, Rockport and Manchester/Essex. The committee will strive to distribute the awards equitably to the area schools. 
+The CAARA Scholarship Program will make one-time awards of $250 to each student who is selected. The number of awards will depend on the funds available and will be given to students in Gloucester, Rockport and Manchester/Essex. The committee will strive to distribute the awards equitably to the area schools.

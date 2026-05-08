@@ -19,7 +19,7 @@ The friendliest regional net with nationwide and international participants.
 
 Our net meets every Monday and Wednesday at 6PM for a round table discussion of a variety of fun and timely topics! Here you will find a variety of material including upcoming and previous topics we've covered: //sites.google.com/view/6pmnet.
 
-We log our net using NetLogger, using the AIM chat feature of that program for sharing links etc. We welcome all HAM radio enthusiasts no matter where you are from or what level of experience you have! Please Join Us! 
+We log our net using NetLogger, using the AIM chat feature of that program for sharing links etc. We welcome all HAM radio enthusiasts no matter where you are from or what level of experience you have! Please Join Us!
 
 ## The Fish Net
 
@@ -32,4 +32,3 @@ stations throughout the stations checked in.
 See [The Fish Net] website for more information.
 
 [the fish net]: https://fishnet.radioactivecapeann.com/
-

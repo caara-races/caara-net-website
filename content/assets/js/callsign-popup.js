@@ -1,4 +1,4 @@
-(function () {
+(() => {
   let popup = null;
   let popupOwner = null;
 
@@ -21,7 +21,9 @@
     if (name) html += `<dt>Name</dt><dd>${escapeHtml(name)}</dd>`;
     if (city) html += `<dt>QTH</dt><dd>${escapeHtml(city)}</dd>`;
     if (grid) {
-      const gridUrl = "https://www.karhukoti.com/maidenhead-grid-square-locator/?grid=" + encodeURIComponent(grid);
+      const gridUrl =
+        "https://www.karhukoti.com/maidenhead-grid-square-locator/?grid=" +
+        encodeURIComponent(grid);
       html += `<dt>Grid</dt><dd><a href="${gridUrl}">${escapeHtml(grid)}</a></dd>`;
     }
 
@@ -45,22 +47,31 @@
     return div.innerHTML;
   }
 
-  document.addEventListener("mouseenter", function (e) {
-    const el = e.target.closest(".callsign[data-call]");
-    if (el) showPopup(el);
-  }, true);
+  document.addEventListener(
+    "mouseenter",
+    (e) => {
+      const el = e.target.closest(".callsign[data-call]");
+      if (el) showPopup(el);
+    },
+    true,
+  );
 
-  document.addEventListener("mouseleave", function (e) {
-    const el = e.target.closest(".callsign[data-call]");
-    if (el && (!e.relatedTarget || !el.contains(e.relatedTarget))) hidePopup();
-  }, true);
+  document.addEventListener(
+    "mouseleave",
+    (e) => {
+      const el = e.target.closest(".callsign[data-call]");
+      if (el && (!e.relatedTarget || !el.contains(e.relatedTarget)))
+        hidePopup();
+    },
+    true,
+  );
 
-  document.addEventListener("focusin", function (e) {
+  document.addEventListener("focusin", (e) => {
     const el = e.target.closest(".callsign[data-call]");
     if (el) showPopup(el);
   });
 
-  document.addEventListener("focusout", function (e) {
+  document.addEventListener("focusout", (e) => {
     const el = e.target.closest(".callsign[data-call]");
     if (el) hidePopup();
   });

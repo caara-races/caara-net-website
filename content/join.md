@@ -8,12 +8,12 @@ weight: 40
 
 Dues payments are not required or accepted with your Membership Application. As soon as your online Membership Application is accepted you will receive a Welcome Package and a Prorated Dues Invoice via email from the CAARA Clerk. Dues may be paid online or by check. Cash works, too, but we recommend you do that in person.
 
-| Annual Membership | Dues   | 
-| ----------------- | ------ | 
-| Regular           | $40.00 | 
-| Senior            | $20.00 | 
-| Youth             | $20.00 | 
-| Family            | $10.00 | 
+| Annual Membership | Dues   |
+| ----------------- | ------ |
+| Regular           | $40.00 |
+| Senior            | $20.00 |
+| Youth             | $20.00 |
+| Family            | $10.00 |
 
 ### Qualifications
 
@@ -33,4 +33,3 @@ Dues payments are not required or accepted with your Membership Application. As 
 - Many educational and social events throughout the year
 - CAARA Newsletter
 - Access to exclusive online Members Area content
-

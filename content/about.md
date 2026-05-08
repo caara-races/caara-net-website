@@ -3,6 +3,8 @@ title: Club information
 tags: page
 ---
 
+<!-- markdownlint-disable MD032 -->
+
 The Cape Ann Amateur Radio Association (CAARA) is an ARRL Special Service Club. The club was formed in 1977 and we are a 501 (C) 3 non-profit charitable organization.
 
 ## Contact

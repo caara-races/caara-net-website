@@ -4,6 +4,8 @@ tags: "page"
 weight: 30
 ---
 
+<!-- markdownlint-disable MD032 MD052 -->
+
 Every month we publish our CAARA Newsletter containing information and news
 pertaining to the life of the Associaion, important reminders, and messages
 from our President and other members. We distribute the newsletter via e-mail
@@ -16,10 +18,8 @@ members and activities.
 
 ## Recent Newsletters
 
-<ul>
 {%- for newsletter in newsletters.recentNewsletters %}
-  <li><a href="{{ newsletter.url }}">{{ newsletter.label }}</a></li>
+- [{{ newsletter.label }}]({{ newsletter.url }})
 {%- endfor %}
-</ul> 
 
 See the [archives](archives/) to see older editions of the newsletter.

@@ -151,7 +151,7 @@ For a drill where action will be taken that might alarm the public, it is
 essential that the Gloucester and Rockport police be notified BEFORE the
 drill. Gloucester is (978) 283-1212, Rockport is (978) 546-1212.
 
-**At the start of the drill and every 10 minutes thereafter say:** "The
+*At the start of the drill and every 10 minutes thereafter say:** "The
 Cape Ann Amateur Radio Association is conducting an emergency
 communications drill on the 145.13 repeater frequency for the next
 (duration). This is only a drill. In the event of an actual emergency radio
@@ -164,7 +164,7 @@ the 145.13 repeater frequency. This is not a drill. Radio amateur
 volunteers are requested to monitor this station and to contact net control
 when requested."
 
-**General Principles for Net Control**
+### General Principles for Net Control
 
 1. Get out the emergency map (in the jump kits and next to the 2-meter
    repeater in the club).
@@ -458,7 +458,9 @@ generally recognized and publicized list of sites to be covered.
 
 ## Regional ARES Communications {#14}
 
-**CAARA is in Sector 1F of ARES/RACES.**
+### ARES/RACES
+
+CAARA is in Sector 1F of ARES/RACES.
 
 | Description                   | Frequency                        |
 | ----------------------------- | -------------------------------- |
@@ -469,7 +471,7 @@ generally recognized and publicized list of sites to be covered.
 | Minuteman Repeater Boston     | 146.820 PL tone in and out 146.2 |
 | Minuteman Repeater Quincy     | 146.670 PL tone in and out 146.2 |
 
-**Other Local Repeaters**
+### Other Local Repeaters
 
 | Location                     | Frequency                        |
 | ---------------------------- | -------------------------------- |
@@ -478,7 +480,7 @@ generally recognized and publicized list of sites to be covered.
 | Salem NSRA                   | 146.880 PL tone 118.8 in and out |
 | Topsfield                    | 147.285 PL tone 100.0 in and out |
 
-**Emergency HF Frequencies**
+### Emergency HF Frequencies
 
 | Description                                      | Frequency                                  |
 | ------------------------------------------------ | ------------------------------------------ |
@@ -486,7 +488,7 @@ generally recognized and publicized list of sites to be covered.
 | Strategic Auxiliary Team Emergency Readiness Net | 14.265 MHz USB (Alternate: 14.312 MHz USB) |
 | Hurricane Watch Net                              | 14.325 MHz by day / 7.268 MHz LSB by night |
 
-**Other Emergency Frequencies**
+### Other Emergency Frequencies
 
 | Description             | Frequency            |
 | ----------------------- | -------------------- |
@@ -494,7 +496,7 @@ generally recognized and publicized list of sites to be covered.
 | Citizens Band Channel 9 | 20.065 MHz           |
 | Marine Channel 16       | 156.8 MHz simplex    |
 
-**Useful Contacts**
+### Useful Contacts
 
 | Contact                                                                  | Info                                                          |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------- |
@@ -508,7 +510,7 @@ generally recognized and publicized list of sites to be covered.
 | MEMA Region 1 RACES Line                                                 | 978.328.1513                                                  |
 | Terry Stadler KA8SCP, RACES Officer for Region 1                         | <ka8scp@wb1gof.org>                                           |
 
-**Public Safety Contacts**
+### Public Safety Contacts
 
 | Contact                      | Phone        |
 | ---------------------------- | ------------ |
@@ -529,7 +531,7 @@ generally recognized and publicized list of sites to be covered.
 
 ## Extended Operations {#15}
 
-**(Food, Water, Shelter and Supplies)**
+### Food, Water, Shelter and Supplies
 
 Members supporting CAARA Emergency Services maintain emergency stocks of
 food, water, batteries, cooking fuel, motor fuel, emergency generators and
@@ -559,7 +561,7 @@ opening contribution to Gloucester Emergency Services.
 
 ## Pre-Planned Equipment Failure Scenarios {#16}
 
-**2-Meter Repeater Troubleshooting**
+### 2-Meter Repeater Troubleshooting
 
 The 2-meter repeater is dependent on the cell-site emergency power. In a
 severe or protracted emergency it is likely to fail. It is also possible
@@ -569,7 +571,7 @@ repeater may be turned off in error.
 Notify the CAARA Board of Directors at <board@caara.net> and use Loss of
 Repeater Procedures until the repeater is fixed.
 
-**Loss of the 2-meter Repeater**
+### Loss of the 2-meter Repeater
 
 If the 2-meter repeater fails or is subject to malicious interference, Net
 Control should shift to the stand-by simplex frequencies:
@@ -586,7 +588,7 @@ After the net is operating, Net Control will break out the 220 MHz jump
 kits and have them run to the operational sites. If there are not enough
 220 kits, the backup 440 repeater will be activated to support activities.
 
-**Loss of power at 6 Stanwood Street**
+### Loss of power at 6 Stanwood Street
 
 1. Switch operations to battery backup power.
 2. Move generator to porch and fuel or hook up to outside gas line.

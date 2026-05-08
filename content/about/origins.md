@@ -105,7 +105,7 @@ building, new electric meter, and new distribution panel with breakers.
 Added concrete pads with posts to protect new gas meter which was also
 installed.
 
-### Ongoing work \...
+### Ongoing work
 
 New replacement windows to replace old rotted ones, paint trim, hot-top
 driveway.
