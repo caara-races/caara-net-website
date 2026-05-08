@@ -4,7 +4,44 @@ import { escape as url_escape } from "node:querystring";
 
 import { HtmlBasePlugin } from "@11ty/eleventy";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItAttrs from "markdown-it-attrs";
+import markdownItContainer from "markdown-it-container";
 import YAML from "yaml";
+
+import { readCache, writeCache } from "./lib/cache.js";
+
+const HAMDB_CACHE_DIR = ".cache/hamdb";
+const HAMDB_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+
+const LICENSE_CLASSES = {
+	T: "Technician",
+	G: "General",
+	E: "Extra",
+	A: "Advanced",
+};
+
+function escapeAttr(str) {
+	return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+async function lookupCallsign(callsign) {
+	const key = callsign.toUpperCase();
+	const cached = await readCache(HAMDB_CACHE_DIR, key, HAMDB_CACHE_TTL_MS);
+	if (cached !== null) return cached;
+
+	const response = await fetch(
+		`http://api.hamdb.org/${key}/json/caara-net`,
+	);
+	if (!response.ok) return null;
+
+	const json = await response.json();
+	const data = json?.hamdb?.callsign;
+	const status = json?.hamdb?.messages?.status;
+	if (!data || status !== "OK") return null;
+
+	await writeCache(HAMDB_CACHE_DIR, key, data);
+	return data;
+}
 
 // Helper function for configuring passthrough copy by extension
 function passthroughCopyExtension(eleventyConfig, ext) {
@@ -15,7 +52,7 @@ function passthroughCopyExtension(eleventyConfig, ext) {
 
 // Define files that should be copied into the rendered content directory.
 function setupPassthroughCopy(eleventyConfig) {
-	["kmz", "kml", "png", "jpg", "pdf", "txt", "gpx", "css"].forEach(
+	["kmz", "kml", "png", "jpg", "pdf", "txt", "gpx", "css", "js"].forEach(
 		(item, _) => {
 			passthroughCopyExtension(eleventyConfig, item);
 		},
@@ -38,11 +75,31 @@ function linkCallsign(callsign) {
 	return `<a href="https://hamdb.org/${callsign}">${callsign}</a>`;
 }
 
+async function renderCallsign(callsign) {
+	let attrs = "";
+	try {
+		const data = await lookupCallsign(callsign);
+		if (data) {
+			const cls = LICENSE_CLASSES[data.class] ?? data.class;
+			const name = `${data.fname} ${data.name}`.trim();
+			const city = [data.addr2, data.state].filter(Boolean).join(", ");
+			attrs = ` data-call="${escapeAttr(callsign)}"`;
+			attrs += ` data-name="${escapeAttr(name)}"`;
+			attrs += ` data-class="${escapeAttr(cls)}"`;
+			attrs += ` data-city="${escapeAttr(city)}"`;
+			if (data.grid) attrs += ` data-grid="${escapeAttr(data.grid)}"`;
+		}
+	} catch {
+		// Graceful degradation: render without popup data
+	}
+	return `<span class="callsign"${attrs}>${linkCallsign(callsign)}</span>`;
+}
+
 // Configure filters
 function setupFilters(eleventyConfig) {
-	eleventyConfig.addFilter("formatAuthor", (author) => {
+	eleventyConfig.addAsyncFilter("formatAuthor", async (author) => {
 		if (author.callsign) {
-			return `${author.name}, ${linkCallsign(author.callsign)}`;
+			return `${author.name}, ${await renderCallsign(author.callsign)}`;
 		}
 		return `${author.name}`;
 	});
@@ -108,17 +165,29 @@ function setupFilters(eleventyConfig) {
 
 export default function (eleventyConfig) {
 	eleventyConfig.amendLibrary("md", (mdLib) =>
-		mdLib.use(markdownItAnchor, {
-			slugify: (s) =>
-				s
-					.trim()
-					.toLowerCase()
-					.replace(/\s+/g, "-")
-					.replace(/[/]/g, "-")
-					.replace(/[^a-z0-9_-]/g, "")
-					.replace(/-+/g, "-")
-					.replace(/^-|-$/g, ""),
-		}),
+		mdLib
+			.use(markdownItAttrs)
+			.use(markdownItContainer, "dynamic", {
+				validate: () => true,
+				render(tokens, idx) {
+					if (tokens[idx].nesting === 1) {
+						const cls = mdLib.utils.escapeHtml(tokens[idx].info.trim());
+						return `<div class="${cls}">\n`;
+					}
+					return "</div>\n";
+				},
+			})
+			.use(markdownItAnchor, {
+				slugify: (s) =>
+					s
+						.trim()
+						.toLowerCase()
+						.replace(/\s+/g, "-")
+						.replace(/[/]/g, "-")
+						.replace(/[^a-z0-9_-]/g, "")
+						.replace(/-+/g, "-")
+						.replace(/^-|-$/g, ""),
+			}),
 	);
 
 	eleventyConfig.setFrontMatterParsingOptions({
@@ -145,10 +214,7 @@ export default function (eleventyConfig) {
 	// This shortcode is used in the copyright notice to ensure it always shows
 	// the current year.
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-	eleventyConfig.addShortcode(
-		"callsign",
-		(callsign) => `<span class="callsign">${linkCallsign(callsign)}</span>`,
-	);
+	eleventyConfig.addAsyncShortcode("callsign", renderCallsign);
 
 	// Allow the use of YAML for data files
 	eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
