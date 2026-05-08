@@ -101,7 +101,15 @@ async function renderCallsign(callsign) {
 function setupFilters(eleventyConfig) {
   eleventyConfig.addAsyncFilter("formatAuthor", async (author) => {
     if (author.callsign) {
-      return `${author.name}, ${await renderCallsign(author.callsign)}`;
+      let name = author.name;
+      if (!name) {
+        const data = await lookupCallsign(author.callsign);
+        if (data) {
+          name = `${data.fname} ${data.name}`.trim();
+        }
+      }
+      const rendered = await renderCallsign(author.callsign);
+      return name ? `${name}, ${rendered}` : rendered;
     }
     return `${author.name}`;
   });

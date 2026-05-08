@@ -9,6 +9,7 @@ layout: base.liquid
 
 <div class="page-title">
   <h2>{{ title }}</h2>
+  {% if author %}<p class="byline">{{ page.date | date: "%Y-%m-%d" }} by {{ author | formatAuthor }}</p>{% endif %}
 </div>
 
 <section id="main">

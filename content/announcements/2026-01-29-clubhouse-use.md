@@ -1,7 +1,6 @@
 ---
 title: "Reminder: Clubhouse Use During Snow and Cold Weather"
 author:
-  name: Brandon Hockle
   callsign: NQ1W
 ---
 

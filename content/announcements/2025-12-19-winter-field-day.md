@@ -1,7 +1,6 @@
 ---
 title: "Winter Field Day 2026 Jan 24th -25th"
 author:
-  name: Brandon Hockle
   callsign: NQ1W
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Open Wednesday morning for coffee and donuts
 author:
-  name: John Cunningham
   callsign: K1TP
 ---
 

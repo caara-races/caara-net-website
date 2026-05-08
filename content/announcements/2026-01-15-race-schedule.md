@@ -1,7 +1,6 @@
 ---
 title: 2026 CAARA-YuKanRun Race Schedule and Recruiting
 author:
-  name: Kevin Lyons
   callsign: K1KL
 ---
 

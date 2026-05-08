@@ -1,7 +1,6 @@
 ---
 title: "Talk at the Gloucester Council on Aging this Monday March 30th 12:30PM"
 author:
-  name: Brandon Hockle
   callsign: NQ1W
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Reminder: Winter Field Day 2026 this weekend!"
 author:
-  name: Brandon Hockle
   callsign: NQ1W
 ---
 
@@ -13,8 +12,8 @@ We will be hosting a public open house from 11:00 AM to 4:00 PM, and lunch will 
 
 For those who have signed up for operating slots outside of the public open house hours and plan on operating solo, please keep the following requirements in mind:
 
-  - You must be a member in good standing for at least six months.
-  - You must be fully checked out on the proper opening and closing procedures for the clubhouse.
-  - You must have completed an equipment check for the first-floor stations.
+- You must be a member in good standing for at least six months.
+- You must be fully checked out on the proper opening and closing procedures for the clubhouse.
+- You must have completed an equipment check for the first-floor stations.
 
 We look forward to a great weekend of operating.

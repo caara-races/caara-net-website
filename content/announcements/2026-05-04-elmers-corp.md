@@ -1,7 +1,6 @@
 ---
 title: Join the CAARA Elmer's Corps Today!
 author:
-  name: Brandon Hockle
   callsign: NQ1W
 ---
 
