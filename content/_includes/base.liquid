@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Cape Ann Amateur Radio Association is an ARRL Affiliated Club, located at 6 Stanwood St. in Gloucester Massachusett">
+  <meta name="theme-color" content="#4078c0">
+
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!--
+    The links in the top navigation menu are ordered by their `weight`
+    attribute. This defaults to `100` (from `content/_data/weight.json`), which
+    means that pages *without* a weight will appear after items with a `weight`
+    less than 100. The sort order for items of the same weight is unspecified,
+    so if you want a particular ordering, set the weight values as appropriate.
+  -->
+  {% assign pages = collections.page | sort: 'data.weight' -%}
+  <nav class="site-nav noprint" aria-label="Main navigation">
+    <ul class="nav-main">
+      {% for item in pages %}
+        {% assign prefix = page.url | slice: 0, item.url.size %}
+        <li {% if item.url == "/" %}{% if page.url == "/" %}class="active"{% endif %}{% elsif prefix == item.url %}class="active"{% endif %}><a href="{{ item.url }}">{{ item.data.short_title | default: item.data.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <main class="page-content">
+  {{ content }}
+  </main>
+
+  <footer>
+    Copyright &copy; {% year %} Cape Ann Amateur Radio Association |
+    Revision: <a href="{{ repository.url }}/commit/{{ vc.revision }}">{{ vc.revision | slice: 0, 10 }}</a> @ {{ vc.date }}
+    <span class="noprint"> |
+    <a href="{{ repository.url }}/blob/{{ repository.ref }}/{{ page.inputPath }}?plain=1">View page source</a> |
+    <a href="{{ repository.url }}/edit/{{ repository.ref }}/{{ page.inputPath }}">Suggest changes</a>
+    </span>
+  </footer>
+</body>
+</html>
