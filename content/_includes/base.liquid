@@ -20,6 +20,11 @@
   -->
   {% assign pages = collections.page | sort: 'data.weight' -%}
   <nav class="site-nav noprint" aria-label="Main navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
     <ul class="nav-main">
       {% for item in pages %}
         {% assign prefix = page.url | slice: 0, item.url.size %}
@@ -41,5 +46,12 @@
     </span>
   </footer>
   <script src="/js/callsign-popup.js"></script>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var nav = this.closest('.site-nav');
+      var expanded = nav.classList.toggle('open');
+      this.setAttribute('aria-expanded', expanded);
+    });
+  </script>
 </body>
 </html>
