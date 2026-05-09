@@ -313,6 +313,35 @@ th {
 }
 
 /* =============================================================================
+   SILENT KEY
+   ============================================================================= */
+
+.sk-entry {
+  border-top: var(--border-width) solid var(--color-border);
+  padding-block: var(--space-md);
+  overflow: hidden;
+}
+
+.sk-entry h3 {
+  margin-top: 0;
+}
+
+.sk-photo {
+  float: left;
+  max-width: 150px;
+  height: auto;
+  margin-right: var(--space-md);
+  margin-bottom: var(--space-xs);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sk-military h3::after {
+  content: "\1F1FA\1F1F8";
+  margin-left: var(--space-xs);
+}
+
+/* =============================================================================
    PRINTING
    ============================================================================= */
 

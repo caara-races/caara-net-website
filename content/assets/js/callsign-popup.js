@@ -21,9 +21,7 @@
     if (name) html += `<dt>Name</dt><dd>${escapeHtml(name)}</dd>`;
     if (city) html += `<dt>QTH</dt><dd>${escapeHtml(city)}</dd>`;
     if (grid) {
-      const gridUrl =
-        "https://www.karhukoti.com/maidenhead-grid-square-locator/?grid=" +
-        encodeURIComponent(grid);
+      const gridUrl = `https://k7fry.com/grid/?t=n&qth=${encodeURIComponent(grid)}`;
       html += `<dt>Grid</dt><dd><a href="${gridUrl}">${escapeHtml(grid)}</a></dd>`;
     }
 

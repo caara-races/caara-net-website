@@ -1,0 +1,27 @@
+---
+title: Silent Key Tributes
+override:tags:
+  - about
+layout: page
+---
+
+<p>
+<img src="sk.jpg" class="sk-photo">
+This page is dedicated to honoring the memories of deceased CAARA members. The
+members listed **SK** here made diverse and significant contributions to the
+Cape Ann Amateur Radio Association which benefited their fellow hams and the
+general welfare of the Club. May they Rest In Peace as we preserve the memories
+of their camaraderie and service.
+</p>
+
+{% assign entries = collections['silent-key'] | sort: 'data.date' | reverse %}
+{% for entry in entries %}
+{% assign callsign_lower = entry.data.callsign | downcase %}
+{% assign photo_jpg = "about/silent-key/" | append: callsign_lower | append: "/cover.jpg" %}
+{% assign has_photo = photo_jpg | fileExists %}
+<div class="sk-entry{% if entry.data.military %} sk-military{% endif %}">
+<h3>{{ entry.data.name }}, {{ entry.data.callsign }}{% if entry.data.date %} ({{ entry.data.date | date: "%Y" }}){% endif %}</h3>
+{% if has_photo %}<img src="/about/silent-key/{{ callsign_lower }}.jpg" alt="{{ entry.data.name }}" class="sk-photo">{% endif %}
+{{ entry.content }}
+</div>
+{% endfor %}
