@@ -35,6 +35,24 @@
     </ul>
   </nav>
 
+  {% assign priority_post = nil %}
+  {% for post in collections.post reversed %}
+    {% if post.data.priority %}
+      {% assign priority_post = post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if priority_post %}
+  <div class="priority-banner noprint">
+    <strong><a href="{{ priority_post.url }}">{{ priority_post.data.title }}</a></strong>
+    {% if priority_post.templateContent contains "<!-- more -->" %}
+    {{ priority_post.templateContent | split: "<!-- more -->" | first }}
+    {% else %}
+    {{ priority_post.templateContent }}
+    {% endif %}
+  </div>
+  {% endif %}
+
   <main class="page-content">
   {{ content }}
   </main>
