@@ -1,7 +1,7 @@
 ---
 title: Newsletter
 tags: "page"
-weight: 30
+weight: 80
 ---
 
 <!-- markdownlint-disable MD032 MD052 -->

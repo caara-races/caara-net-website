@@ -2,7 +2,7 @@
 title: Public service & Emergency Communications
 short_title: Public service
 tags: page
-weight: 50
+weight: 40
 ---
 
 ## Race & event support

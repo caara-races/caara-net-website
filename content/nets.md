@@ -1,6 +1,7 @@
 ---
 title: Nets
 tags: page
+weight: 50
 ---
 
 ## Sunday Evening 2 Meter Net (CAARAnet)

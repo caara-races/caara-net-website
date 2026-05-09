@@ -221,6 +221,8 @@ export default function (eleventyConfig) {
     baseHref: process.env.ELEVENTY_BASEURL || "",
   });
 
+  eleventyConfig.addGlobalData("siteDebug", process.env.ELEVENTY_SITE_DEBUG);
+
   // This shortcode is used in the copyright notice to ensure it always shows
   // the current year.
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);

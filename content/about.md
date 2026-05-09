@@ -1,6 +1,7 @@
 ---
 title: Club information
 tags: page
+weight: 100
 ---
 
 <!-- markdownlint-disable MD032 -->

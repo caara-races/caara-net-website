@@ -1,6 +1,7 @@
 ---
 title: Repeaters
 tags: page
+weight: 60
 ---
 
 CAARA operates two repeaters:

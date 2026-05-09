@@ -1,6 +1,6 @@
 ---
 title: Home
-weight: 10
+weight: 0
 tags: page
 layout: home
 ---
