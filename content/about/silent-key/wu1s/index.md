@@ -5,7 +5,7 @@ date: 2014-10-08
 military: false
 ---
 
-**Francis A. "Frank" Vidal {% callsign "WU1S" %}**, 87, husband of Joan (Child) Vidal, of Gloucester, passed away on Wednesday, October 8, 2014 at his home in Gloucester.
+**Francis A. "Frank" Vidal WU1S**, 87, husband of Joan (Child) Vidal, of Gloucester, passed away on Wednesday, October 8, 2014 at his home in Gloucester.
 
 Born in Gloucester on September 18, 1927, he was the son of the late Joseph and Mary (Silva) Vidal.
 

@@ -5,7 +5,7 @@ date: 2018-03-11
 military: false
 ---
 
-CAARA member **John Graves II, {% callsign "WA1JG" %}** passed away peacefully on Sunday, March 11, 2018.
+CAARA member **John Graves II, WA1JG** passed away peacefully on Sunday, March 11, 2018.
 
 John was a loving husband, father, brother, grandfather and uncle. He was a perpetual tinkerer, an avid reader, and an animal aficionado, with a seemingly boundless curiosity for learning about and mastering any new technology he could get his hands on (including cars, radio, cameras, personal computers and electronics), and a love for collecting new tools and toys he could use to play around with that technology.
 

@@ -5,7 +5,7 @@ date: 2018-01-25
 military: true
 ---
 
-CAARA member **Bob McKechnie {% callsign "W1MVM" %}** passed away on Thursday morning January 25, 2018 at Seacoast Nursing and Rehabilitation Center in Gloucester. He was active in CAARA as a skilled Extra Class Operator and was a regular with the Sunday Night Net until very recently. Bob was also a regular at the Rose Baker Senior Center in Gloucester.
+CAARA member **Bob McKechnie W1MVM** passed away on Thursday morning January 25, 2018 at Seacoast Nursing and Rehabilitation Center in Gloucester. He was active in CAARA as a skilled Extra Class Operator and was a regular with the Sunday Night Net until very recently. Bob was also a regular at the Rose Baker Senior Center in Gloucester.
 
 McKechnie was a WWII Veteran who joined up just as he graduated from GHS. He was stationed in Biloxi, Miss., for training in the Air Corp, where he found himself placed in the tail gunner's seat on B-24 Liberator bombers.
 

@@ -5,7 +5,7 @@ date: 2013-12-10
 military: true
 ---
 
-**Ralph E. Karcher, Jr. {% callsign "W1RK" %}**, 88, died Tuesday morning, December 10, 2013 following an extended illness. He was the husband of Mariam B. (Purdy) Karcher.
+**Ralph E. Karcher, Jr. W1RK**, 88, died Tuesday morning, December 10, 2013 following an extended illness. He was the husband of Mariam B. (Purdy) Karcher.
 
 Born in Gloucester on February 27, 1925, he was the son of the late Ralph E. and Ethel (Corkum) Karcher. He was a lifelong resident of Gloucester and graduate of the Gloucester High School class of 1943, where he was a member of the Fighting Fishermen Football team and a Northeast Conference All Star. He played for Nate Ross, who once said Ralph was the best lineman he ever coached. He was proud to be inducted into the Gloucester High School Hall of Fame.
 
