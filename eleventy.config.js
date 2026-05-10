@@ -247,10 +247,8 @@ export default function (eleventyConfig) {
 
   // Permit setting base url from the environment.
   eleventyConfig.addPlugin(HtmlBasePlugin, {
-    baseHref: process.env.ELEVENTY_BASEURL || "",
+    baseHref: process.env.ELEVENTY_HTML_BASE || "",
   });
-
-  eleventyConfig.addGlobalData("siteDebug", process.env.ELEVENTY_SITE_DEBUG);
 
   // This shortcode is used in the copyright notice to ensure it always shows
   // the current year.

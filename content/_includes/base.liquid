@@ -29,7 +29,7 @@
       {% for item in pages %}
         {% assign prefix = page.url | slice: 0, item.url.size %}
       <li {% if item.url == "/" %}{% if page.url == "/" %}class="active"{% endif %}{% elsif prefix == item.url %}class="active"{% endif %}>
-        <a href="{{ item.url }}">{{ item.data.shortTitle | default: item.data.title }}</a>{% if siteDebug %}({{ item.data.weight }}){% endif %}
+        <a href="{{ item.url }}">{{ item.data.shortTitle | default: item.data.title }}</a>{% if site.debug %}({{ item.data.weight }}){% endif %}
       </li>
       {% endfor %}
     </ul>
