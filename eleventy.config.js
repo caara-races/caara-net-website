@@ -114,6 +114,20 @@ function setupFilters(eleventyConfig) {
     return `${author.name}`;
   });
 
+  eleventyConfig.addAsyncFilter("formatAuthorPlain", async (author) => {
+    if (author.callsign) {
+      let name = author.name;
+      if (!name) {
+        const data = await lookupCallsign(author.callsign);
+        if (data) {
+          name = `${data.fname} ${data.name}`.trim();
+        }
+      }
+      return name ? `${name}, ${author.callsign}` : author.callsign;
+    }
+    return `${author.name}`;
+  });
+
   eleventyConfig.addFilter(
     "replaceNewlines",
     (value, replacement = "<br/>") => {
