@@ -116,14 +116,15 @@ function setupFilters(eleventyConfig) {
 
   eleventyConfig.addAsyncFilter("formatAuthorPlain", async (author) => {
     if (author.callsign) {
+      const callsign = author.callsign.toUpperCase();
       let name = author.name;
       if (!name) {
-        const data = await lookupCallsign(author.callsign);
+        const data = await lookupCallsign(callsign);
         if (data) {
           name = `${data.fname} ${data.name}`.trim();
         }
       }
-      return name ? `${name}, ${author.callsign}` : author.callsign;
+      return name ? `${name}, ${callsign}` : callsign;
     }
     return `${author.name}`;
   });
