@@ -18,7 +18,9 @@ The CAARA club net is also available and accessible via Echolink. W1GLO-R will c
 
 The friendliest regional net with nationwide and international participants.
 
-Our net meets every Monday and Wednesday at 6PM for a round table discussion of a variety of fun and timely topics! Here you will find a variety of material including upcoming and previous topics we've covered: //sites.google.com/view/6pmnet.
+Our net meets every Monday and Wednesday at 6PM for a round table discussion of a variety of fun and timely topics! See the [6pmnet website] to find a variety of material including upcoming and previous topics we've covered.
+
+[6pmnet website]: https://sites.google.com/view/6pmnet.
 
 We log our net using NetLogger, using the AIM chat feature of that program for sharing links etc. We welcome all HAM radio enthusiasts no matter where you are from or what level of experience you have! Please Join Us!
 
