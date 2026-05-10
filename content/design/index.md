@@ -21,6 +21,19 @@ source][html-src].
 [this example document]: sample
 [html-src]: https://raw.githubusercontent.com/caara-races/caara-net-website/refs/heads/main/content/design/sample.html
 
+## Portable hosting
+
+Because the content is plain text, which gets rendered into a set of static
+HTML files, we are able to host the site pretty much anywhere. There is free
+hosting available from sites like...
+
+- [Github](https://github.com)
+- [Firebase](https://firebase.google.com)
+- [Netlify](https://netlify.com)
+- and many others.
+
+All of these sites also support free SSL certificates and custom domains.
+
 ## Responsive design
 
 The site displays well on both large and small screens. Below a certain
@@ -80,4 +93,6 @@ Many pages are effectively "lists of items":
 
 These pages are all generated automatically by iterating over the relevant
 items. This same feature also lets us easily generate a news feed from the
-list of announcements (see [/feed.xml](/feed.xml)).
+list of announcements (see [/feed.xml](/feed.xml)) and even handle the
+pagination of announcements (they are displayed five per page, with
+older/newer links to navigate the complete list).
