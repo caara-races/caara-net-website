@@ -1,6 +1,6 @@
 ---
 title: Public service & Emergency Communications
-short_title: Public service
+shortTitle: Public service
 tags: page
 weight: 40
 ---
