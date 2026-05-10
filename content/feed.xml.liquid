@@ -4,7 +4,7 @@ layout: false
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="/style/atom.css" type="text/css" title="Default style"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:oddbit="http://schema.oddbit.com/atom">
   <title>Cape Ann Amateur Radio Association</title>
   <link href="{{ site.url }}/feed.xml" rel="self" />
   <link href="{{ site.url }}/" />
@@ -22,8 +22,8 @@ layout: false
       <name>{{ post.data.author | formatAuthorPlain }}</name>
     </author>
 {% endif %}
-    <content type="text/html">
-      {{ post.content }}
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">{{ post.content }}</div>
     </content>
     <link href="{{ site.url }}{{ post.url }}" />
     <id>{{ site.url }}{{ post.url }}</id>
