@@ -145,6 +145,7 @@ footer {
 .site-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-sm);
 }
 
@@ -367,5 +368,10 @@ th {
 @media print {
   .noprint {
     display: none;
+  }
+
+  img {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
