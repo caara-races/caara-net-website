@@ -208,6 +208,21 @@ export default function (eleventyConfig) {
   setupPassthroughCopy(eleventyConfig);
   setupFilters(eleventyConfig);
 
+  eleventyConfig.addCollection("aliases", function (collectionApi) {
+    const aliases = [];
+    for (const item of collectionApi.getAll()) {
+      if (item.data.aliases) {
+        for (const alias of item.data.aliases) {
+          const from = alias.endsWith("/")
+            ? `${alias}index.html`
+            : `${alias}/index.html`;
+          aliases.push({ from, to: item.url });
+        }
+      }
+    }
+    return aliases;
+  });
+
   eleventyConfig.setDataFileBaseName("_data");
 
   // Setting a watch target on a file means that changes to that file will

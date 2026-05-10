@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections.aliases
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.from }}"
+layout: false
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url={{ redirect.to }}">
+  <link rel="canonical" href="{{ redirect.to }}">
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>This page has moved to <a href="{{ redirect.to }}">{{ redirect.to }}</a>.</p>
+</body>
+</html>
