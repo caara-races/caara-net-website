@@ -4,7 +4,7 @@ layout: false
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="/style/atom.css" type="text/css" title="Default style"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:oddbit="http://schema.oddbit.com/atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org">
   <title>Cape Ann Amateur Radio Association</title>
   <link href="{{ site.url }}/feed.xml" rel="self" />
   <link href="{{ site.url }}/" />
@@ -14,7 +14,14 @@ layout: false
     <email>info@caara.net</email>
   </author>
   <id>{{ site.url }}/feed.xml</id>
-{% for post in collections.post limit: 10 %}
+  <dc:description>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+    This is the Atom feed for {{site.url}}. While it does display in a browser, it is meant to be consumed by a feed reader. See
+    the <a href="https://en.wikipedia.org/wiki/News_aggregator">Wikipedia article on "news aggregators"</a> for more information.
+    </div>
+  </dc:description>
+{% assign posts = collections.post | reverse %}
+{% for post in posts limit: 10 %}
   <entry>
     <title>{{ post.data.title }}</title>
 {% if post.data.author %}
