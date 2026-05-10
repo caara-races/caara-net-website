@@ -53,7 +53,7 @@
   </div>
   {% endif %}
 
-  <main class="page-content">
+  <main class="page-content{% if contentClass %} {{ contentClass }}{% endif %}">
   {{ content }}
   </main>
 

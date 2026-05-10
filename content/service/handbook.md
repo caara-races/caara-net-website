@@ -1,8 +1,8 @@
 ---
 title: Emergency Operations Handbook
+contentClass: handbook
 ---
 
-::: handbook
 This manual is designed for field use by Cape Ann Amateur Radio Association
 (CAARA) members in a communications emergency or in proficiency drills. It
 is written by amateurs, for amateurs, for use in situations where there is
@@ -599,4 +599,3 @@ kits and have them run to the operational sites. If there are not enough
 
 - Updated: December 3, 2024
 - Converted to markdown: May 8, 2026
-:::
