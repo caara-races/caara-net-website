@@ -1,0 +1,103 @@
+---
+permalink: /style/atom.css
+layout: false
+---
+
+{% render "css/variables.css" %}
+
+feed {
+  display: block;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: var(--space-sm);
+  font-family: var(--font-system);
+  color: var(--color-text);
+}
+
+feed > title {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+feed > author {
+  display: block;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+feed > author > name {
+  display: inline;
+}
+
+feed > author > email {
+  display: inline;
+}
+
+feed > author > email::before {
+  content: "<";
+}
+
+feed > author > email::after {
+  content: ">";
+}
+
+feed > updated,
+feed > id,
+feed > link {
+  display: none;
+}
+
+entry {
+  display: block;
+  border: var(--border-width) solid var(--color-border);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+entry > title {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+entry > author {
+  display: block;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+entry > author > name {
+  display: inline;
+}
+
+entry > updated {
+  display: block;
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+entry > summary {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+entry > content {
+  display: block;
+}
+
+entry > content p {
+  display: block;
+  margin-block: 0.75rem;
+}
+
+entry > link,
+entry > id {
+  display: none;
+}

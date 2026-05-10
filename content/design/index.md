@@ -32,3 +32,14 @@ Finally, we have the administrative section: how to join the club, after seen al
 It is possible to annotate callsigns so that hovering the mouse over one displays a popup with information retrieved from the FCC license database.
 
 ![Popup showing callsign details](popup.png)
+
+## Data driven content
+
+Many pages are effectively "lists of items":
+
+- The news posts on [/announcements](/announcements/)
+- The silent key tributes at [/about/silent-key](/about/silent-key/)
+- The list of links in the navigation menu
+- The list of newsletters at [/newsletter](/newsletter/)
+
+These pages are all generated automatically by iterating over the relevant items. This same feature also lets us easily generate a news feed from the list of announcements (see [/feed.xml](/feed.xml)).
