@@ -208,7 +208,7 @@ export default function (eleventyConfig) {
   setupPassthroughCopy(eleventyConfig);
   setupFilters(eleventyConfig);
 
-  eleventyConfig.addCollection("aliases", function (collectionApi) {
+  eleventyConfig.addCollection("aliases", (collectionApi) => {
     const aliases = [];
     for (const item of collectionApi.getAll()) {
       if (item.data.aliases) {
