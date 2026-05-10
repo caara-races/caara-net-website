@@ -6,14 +6,14 @@ layout: false
 <?xml-stylesheet href="/style/atom.css" type="text/css" title="Default style"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Cape Ann Amateur Radio Association</title>
-  <link href="https://caara-net.oddbit.com/feed.xml" rel="self" />
-  <link href="https://caara-net.oddbit.com/" />
+  <link href="{{ site.url }}/feed.xml" rel="self" />
+  <link href="{{ site.url }}/" />
   <updated>{{ build.timestamp | date: "%Y-%m-%dT%H:%M:%S%z" }}</updated>
   <author>
     <name>Cape Ann Amateur Radio Association</name>
     <email>info@caara.net</email>
   </author>
-  <id>https://caara-net.oddbit.com/feed.xml</id>
+  <id>{{ site.url }}/feed.xml</id>
 {% for post in collections.post limit: 10 %}
   <entry>
     <title>{{ post.data.title }}</title>
@@ -25,8 +25,8 @@ layout: false
     <content type="text/html">
       {{ post.content }}
     </content>
-    <link href="{{ post.url }}" />
-    <id>{{ post.url }}</id>
+    <link href="{{ site.url }}{{ post.url }}" />
+    <id>{{ site.url }}{{ post.url }}</id>
     <updated>{{ post.date | date: "%Y-%m-%dT%H:%M:%S%z"}}</updated>
 {% if post.data.summary %}
     <summary>
