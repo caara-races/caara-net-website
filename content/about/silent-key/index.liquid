@@ -5,10 +5,14 @@ override:tags:
 layout: page
 aliases:
 - /main/sk
+pagination:
+  data: collections['silent-key']
+  reverse: true
+  size: 5
 ---
 
 <p>
-<img src="sk.jpg" class="sk-photo">
+<img src="/about/silent-key/sk.jpg" class="sk-photo">
 This page is dedicated to honoring the memories of deceased CAARA members. The
 members listed **SK** here made diverse and significant contributions to the
 Cape Ann Amateur Radio Association which benefited their fellow hams and the
@@ -16,8 +20,7 @@ general welfare of the Club. May they Rest In Peace as we preserve the memories
 of their camaraderie and service.
 </p>
 
-{% assign entries = collections['silent-key'] | sort: 'data.date' | reverse %}
-{% for entry in entries %}
+{% for entry in pagination.items %}
 {% assign callsign_lower = entry.data.callsign | downcase %}
 {% assign photo_jpg = "about/silent-key/" | append: callsign_lower | append: "/cover.jpg" %}
 {% assign has_photo = photo_jpg | fileExists %}
@@ -27,3 +30,14 @@ of their camaraderie and service.
 {{ entry.content }}
 </div>
 {% endfor %}
+
+{% if pagination.href.previous or pagination.href.next %}
+<nav class="pagination-nav" aria-label="Announcements pagination">
+  {% if pagination.href.previous %}
+  <a class="pagination-newer" href="{{ pagination.href.previous }}">&laquo; Newer</a>
+  {% endif %}
+  {% if pagination.href.next %}
+  <a class="pagination-older" href="{{ pagination.href.next }}">Older &raquo;</a>
+  {% endif %}
+</nav>
+{% endif %}
