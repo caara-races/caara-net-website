@@ -6,6 +6,7 @@ import { HtmlBasePlugin } from "@11ty/eleventy";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItContainer from "markdown-it-container";
+import markdownItImageFigures from "markdown-it-image-figures";
 import YAML from "yaml";
 
 import { readCache, writeCache } from "./lib/cache.js";
@@ -201,6 +202,9 @@ export default function (eleventyConfig) {
           }
           return "</div>\n";
         },
+      })
+      .use(markdownItImageFigures, {
+        figcaption: true,
       })
       .use(markdownItAnchor, {
         slugify: (s) =>
