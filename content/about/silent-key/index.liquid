@@ -23,7 +23,7 @@ of their camaraderie and service.
 {% assign has_photo = photo_jpg | fileExists %}
 <div class="sk-entry{% if entry.data.military %} sk-military{% endif %}">
 <h3>{{ entry.data.name }}, {{ entry.data.callsign }}{% if entry.data.date %} ({{ entry.data.date | date: "%Y" }}){% endif %}</h3>
-{% if has_photo %}<img src="/about/silent-key/{{ callsign_lower }}.jpg" alt="{{ entry.data.name }}" class="sk-photo">{% endif %}
+{% if has_photo %}<img src="/about/silent-key/{{ callsign_lower }}/cover.jpg" alt="{{ entry.data.name }}" class="sk-photo">{% endif %}
 {{ entry.content }}
 </div>
 {% endfor %}
