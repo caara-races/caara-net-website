@@ -3,6 +3,7 @@ import path from "node:path";
 import { escape as url_escape } from "node:querystring";
 
 import { HtmlBasePlugin } from "@11ty/eleventy";
+import { DateTime } from "luxon";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItContainer from "markdown-it-container";
@@ -221,6 +222,31 @@ export default function (eleventyConfig) {
 
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: false,
+  });
+
+  // This code is solving two problems:
+  //
+  // 1. Eleventy interprets a bare date as midnight UTC. Since we are in UTC-4,
+  //    this makes all displayed dates one day early (2025-12-19 gets displayed
+  //    as 2025-12-18).
+  //
+  // 2. Eleventy parses dates from filenames at a different point than it
+  //    parses the `date` frontmatter values, which means that `dateValue` is
+  //    undefined for pages with dates in filenames.
+  //
+  // See https://github.com/11ty/eleventy/issues/3649 for some related
+  // discussion.
+  eleventyConfig.addDateParsing(function (dateValue) {
+    let isoString = typeof dateValue === "string" ? dateValue : undefined;
+    if (!isoString && this.page?.inputPath) {
+      const match = path
+        .basename(this.page.inputPath)
+        .match(/^(\d{4}-\d{2}-\d{2})/);
+      if (match) isoString = match[1];
+    }
+    if (isoString) {
+      return DateTime.fromISO(isoString, { zone: "America/New_York" });
+    }
   });
 
   exposeRunMode(eleventyConfig);

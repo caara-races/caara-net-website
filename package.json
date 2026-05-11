@@ -5,6 +5,7 @@
 		"@11ty/eleventy": "github:11ty/eleventy",
 		"@11ty/parse-date-strings": "^2.0.6",
 		"glob": "^13.0.6",
+		"luxon": "^3.7.2",
 		"markdown-it-anchor": "^9.2.0",
 		"markdown-it-attrs": "^4.3.1",
 		"markdown-it-container": "^4.0.0",
