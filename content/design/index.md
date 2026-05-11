@@ -96,3 +96,12 @@ items. This same feature also lets us easily generate a news feed from the
 list of announcements (see [/feed.xml](/feed.xml)) and even handle the
 pagination of announcements (they are displayed five per page, with
 older/newer links to navigate the complete list).
+
+## What about members-only access?
+
+While the technical bar for implementing a password-protected section
+of the website is relatively low, this feature is unfortunately not
+supported (at the free tier) by any static hosting providers. If
+having a members-only section of the site is a hard requirement, that
+probably means moving to a paid service, which would run somewhere
+between $10 and $20 a month.
