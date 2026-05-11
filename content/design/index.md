@@ -92,10 +92,15 @@ Many pages are effectively "lists of items":
 - The list of newsletters at [/newsletter](/newsletter/)
 
 These pages are all generated automatically by iterating over the relevant
-items. This same feature also lets us easily generate a news feed from the
-list of announcements (see [/feed.xml](/feed.xml)) and even handle the
-pagination of announcements (they are displayed five per page, with
-older/newer links to navigate the complete list).
+items. A particularly good example of this is the "announcements" section:
+
+- A list of the five most recent announcements is displayed on the home page.
+- The [/announcements](/announcements) page displays paginated list of announcements
+  and excerpts, five per page.
+- [/announcements/archive](/announcements/archive) displays a list of all announcements, grouped by year.
+
+These three lists are all generated automatically from the same source of data.
+There is no manual work required to keep them in sync.
 
 ## What about members-only access?
 
