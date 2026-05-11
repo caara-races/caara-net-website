@@ -2,7 +2,12 @@
 title: Join CAARA
 tags: page
 weight: 90
+showTitle: false
 ---
+
+::: banner
+![The words "Join Us" floating in the sky above a radio tower](joinus.png)
+:::
 
 ## Benefits of CAARA Membership
 

@@ -7,10 +7,12 @@ layout: base.liquid
   <h1>Cape Ann Amateur Radio Association</h1>
 </header>
 
+{% unless showTitle == false %}
 <div class="page-title">
   <h1>{{ title }}</h1>
   {% if author %}<p class="byline">{{ page.date | date: "%Y-%m-%d" }} by {{ author | formatAuthor }}</p>{% endif %}
 </div>
+{% endunless %}
 
 <section id="main">
 {{ content }}
